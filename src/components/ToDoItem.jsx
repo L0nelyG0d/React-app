@@ -1,1 +1,6 @@
-const ToDoItem = ({ todo, toogleComplete})
+const ToDoItem = ({ todo, toggleComplete, removeTask}) => {
+  return(
+    <div className="todo-ite"></>
+  );
+};
+
