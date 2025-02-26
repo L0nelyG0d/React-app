@@ -20,7 +20,7 @@ const TodoForm = ({ addTask }) => {
                 onChange={(e) => setTask(e.target.value)}
                 className="input-field"
             />
-            <button type="submit" className="add-btn">Add</button>
+            <button type="submit" className="add-btn">✔</button>
         </form>
     );
 };
