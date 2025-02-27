@@ -6,16 +6,15 @@ const ToDoItem = ({ todo, toggleComplete, removeTask }) => {
             <input
                 type="checkbox"
                 checked={todo.completed}
-                onChange={() => toggleComplete(todo.id)}
+                onChange={toggleComplete}
                 className="checkBox"
             />
             <span>{todo.text}</span>
-            <button onClick={() => removeTask(todo.id)} className="delete-btn">X</button>
+            <button onClick={removeTask} className="delete-btn">X</button>
         </div>
     );
 };
 
-// ✅ Валидация пропсов
 ToDoItem.propTypes = {
     todo: PropTypes.shape({
         id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,

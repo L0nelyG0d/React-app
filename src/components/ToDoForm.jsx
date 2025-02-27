@@ -1,13 +1,13 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-const TodoForm = ({ addTask }) => {
+const TodoForm = ({ addTask, selectedDate }) => {
     const [task, setTask] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!task.trim()) return;
-        addTask(task);
+        addTask(task, selectedDate);
         setTask("");
     };
 
@@ -15,7 +15,7 @@ const TodoForm = ({ addTask }) => {
         <form onSubmit={handleSubmit} className="todo-form">
             <input
                 type="text"
-                placeholder="Add a task..."
+                placeholder={`Add a task for ${selectedDate}`}
                 value={task}
                 onChange={(e) => setTask(e.target.value)}
                 className="input-field"
@@ -27,6 +27,7 @@ const TodoForm = ({ addTask }) => {
 
 TodoForm.propTypes = {
     addTask: PropTypes.func.isRequired,
+    selectedDate: PropTypes.string.isRequired,
 };
 
 export default TodoForm;
