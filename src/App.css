@@ -4,19 +4,29 @@
     font-family: Arial, sans-serif;
     margin-top: 10px;
 }
-.app h1{
+
+.date-picker {
+    position: absolute;
+    top: 600px;
+    right: 70px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+}
+
+.app h1 {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height: 100vh;
-    margin-left: 650px;
+    position: relative;
+    top: -350px; /* Вместо margin-top */
+    left: 650px; /* Вместо margin-left */
     color: lightgrey;
 }
 
-/* ✅ Form Styling */
-.todo-form {
-    margin: 20px 0;
-}
+
 
 .input-field {
     position: fixed;
@@ -43,6 +53,16 @@
     border-radius: 5px;
     transition: background 0.3s ease-in-out;
 }
+
+
+.tasks-heading{
+    color: white;
+    font-size: 20px;
+    padding: 0 0 40px 0;
+}
+
+
+
 
 .add-btn:hover {
     background-color: #918b8b;
